@@ -1,0 +1,70 @@
+********************************     B S Q     ********************************
+
+
+INSTRUCTIONS:
+
+
+////////////////////
+
+SETUP MAP:
+----
+	1 - The map is passed as argument
+		EX: ./bsq board1 board2 board3
+		EX: ./bsq boardmain
+
+----
+	2 - Map is made of empty characters, obsctacle characters
+		EX: empty characters = '.' ; full characters = 'o' ; 
+	
+----	
+	3 - When more than a map is passed, it shows each solution or map ERROR followed by a line break, then move to the next map
+
+----	
+	4 - If no map is passed as argument then read the standard input
+
+----
+	5 - Definition of valid map:
+		◦ All lines must have the same length.
+		◦ There’s at least one line of at least one box.
+		◦ At each end of line, there’s a line break.
+		◦ The characters on the map can only be those introduced in the first line.
+		◦ The map is invalid if a character is missing from the first line, or if two characters (of empty, full and obstacle) are identical.
+		◦ The characters can be any printable character, even numbers.
+		◦ In case of an invalid map, your program should display map error on the error
+output followed by a line break. Your program will then move on to the next
+map.
+
+----
+	6 - Example of map:
+		%>cat example_file
+		9.ox
+		...........................
+		....o......................
+		............o..............
+		...........................
+		....o......................
+		...............o...........
+		...........................
+		......o..............o.....
+		..o.......o................
+		%>./bsq example_file
+		.....xxxxxxx...............
+		....oxxxxxxx...............
+		.....xxxxxxxo..............
+		.....xxxxxxx...............
+		....oxxxxxxx...............
+		.....xxxxxxx...o...........
+		.....xxxxxxx...............
+		......o..............o.....
+		..o.......o................
+		%>
+
+////////////////////
+
+Solve BSQ:
+----
+	1 - Find the biggest cube on the map
+
+----
+	2 - If two or more cubes have the same size draw the one more close to the top left
+	
